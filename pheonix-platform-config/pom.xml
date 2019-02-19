@@ -21,7 +21,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<start-class>com.pheonix.platform.configuration.PlatformConfigurationApplication</start-class>
-		<dockerfile-maven-version>1.4.10</dockerfile-maven-version>
+		<dockerfile-maven-version>1.2.0</dockerfile-maven-version>
 		<docker.image.prefix>pheonix</docker.image.prefix>
 	</properties>
 

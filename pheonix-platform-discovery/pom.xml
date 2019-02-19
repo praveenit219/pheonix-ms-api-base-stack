@@ -21,7 +21,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<start-class>com.pheonix.platform.discovery.PlatformDiscoveryApplication</start-class>
-		<dockerfile-maven-version>1.4.10</dockerfile-maven-version>
+		<dockerfile-maven-version>1.2.0</dockerfile-maven-version>
 		<docker.image.prefix>pheonix</docker.image.prefix>
 	</properties>
 
@@ -72,7 +72,7 @@
 				</executions>
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<dockerDirectory>${project.basedir}\src\main\docker</dockerDirectory>
 					<imageTags>
 						<imageTag>${project.version}</imageTag>
 						<imageTag>latest</imageTag>
