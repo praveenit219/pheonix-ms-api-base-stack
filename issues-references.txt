@@ -1,0 +1,25 @@
+
+build issues with maven :
+=============================
+for docker spotify maven plugin,
+
+the docker build with spotify have issue in building image, version 1.2.0 maven plugin
+with docker Docker version 18.09.1, build 4c52b90 in windows with linux container.
+
+work around ->
+
+(1) in docker desktop settings -> enabled "Expose daemon on tcp:\\localhost:2375 without TLS"
+(2) run below environment settings before using mvn clean install for not skipping docker building
+	please create a bat file and run the settings before running mvn clean install.
+	
+	set the settings i gave in .bat file
+	set DOCKER_HOST=tcp://localhost:2375
+	set DOCKER_MACHINE_NAME=default
+	set DOCKER_TLS_VERIFY=1
+	set DOCKER_CERT_PATH=C:\Users[userid].docker\machine\machines\default
+
+	and run the mvn install for spotify docker
+	
+	
+docker issues with maven for  credentials :
+===========================================
