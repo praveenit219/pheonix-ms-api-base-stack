@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: pheonix-platform-disovery
+pheonix:
+  platform:
+    discovery:
+      version: @project.version@

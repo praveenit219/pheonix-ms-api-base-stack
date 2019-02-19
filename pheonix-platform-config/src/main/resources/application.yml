@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: pheonix-platform-config
+pheonix:
+  platform:
+    config:
+      version: @project.version@
