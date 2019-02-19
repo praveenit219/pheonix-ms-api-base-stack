@@ -1,6 +1,8 @@
 
 build issues with maven :
 =============================
+observation : in windows 10
+
 for docker spotify maven plugin,
 
 the docker build with spotify have issue in building image, version 1.2.0 maven plugin
