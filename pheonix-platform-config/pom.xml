@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.pheonix</groupId>
-	<version>${version.number}</version>
+	<version>1.0.0</version>
 	<artifactId>pheonix-platform-config</artifactId>
 	<name>pheonix platform configuration project</name>
 	<description>pheonix application configuration management library source</description>
@@ -23,7 +23,6 @@
 		<start-class>com.pheonix.platform.configuration.PlatformConfigurationApplication</start-class>
 		<dockerfile-maven-version>1.4.10</dockerfile-maven-version>
 		<docker.image.prefix>pheonix</docker.image.prefix>
-		<version.number>${git.commit.time}.${git.commit.id.abbrev}</version.number>
 	</properties>
 
 	<dependencyManagement>
@@ -57,28 +56,6 @@
 
 
 		<plugins>
-
-			<plugin>
-				<groupId>pl.project13.maven</groupId>
-				<artifactId>git-commit-id-plugin</artifactId>
-				<version>2.2.6</version>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>revision</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<dateFormat>yyyyMMdd-HHmmss</dateFormat><!-- human-readable part of 
-						the version id -->
-					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-					<generateGitPropertiesFile>false</generateGitPropertiesFile><!-- somehow 
-						necessary. otherwise the variables are not available in the pom -->
-				</configuration>
-			</plugin>
-
 
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -123,30 +100,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>spring-releases</id>
-			<name>Spring Releases</name>
-			<url>http://repo.spring.io/libs-release-local</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>repo.spring.io-milestones</id>
-			<name>repo.spring.io-milestones</name>
-			<url>http://repo.spring.io/libs-milestone-local</url>
-		</repository>
-		<repository>
-			<id>repo.spring.io-snapshots</id>
-			<name>repo.spring.io-snapshots</name>
-			<url>http://repo.spring.io/libs-snapshot-local</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 
 
 </project>

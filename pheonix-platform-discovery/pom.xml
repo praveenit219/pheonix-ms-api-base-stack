@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.pheonix</groupId>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<artifactId>pheonix-platform-discovery</artifactId>
 	<name>phoenix platform service discovery</name>
 	<description>platform service to register and discover services jvm based.</description>

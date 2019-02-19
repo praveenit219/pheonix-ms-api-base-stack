@@ -13,7 +13,7 @@
 
 	<groupId>com.pheonix</groupId>
 	<artifactId>pheonix-platform-common</artifactId>
-	<version>${version.number}</version>
+	<version>1.0.0</version>
 	<name>pheonix-platform-common</name>
 	<description>pheonix project for Spring Boot microservices common library stack</description>
 
@@ -21,8 +21,7 @@
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<version.number>${git.commit.time}.${git.commit.id.abbrev}</version.number>
+		<maven.compiler.source>1.8</maven.compiler.source>		
 	</properties>
 
 	<dependencyManagement>
@@ -110,26 +109,6 @@
 	<build>
 		<plugins>
 
-			<plugin>
-				<groupId>pl.project13.maven</groupId>
-				<artifactId>git-commit-id-plugin</artifactId>
-				<version>2.2.6</version>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>revision</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<dateFormat>yyyyMMdd-HHmmss</dateFormat><!-- human-readable part of 
-						the version id -->
-					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-					<generateGitPropertiesFile>false</generateGitPropertiesFile><!-- somehow 
-						necessary. otherwise the variables are not available in the pom -->
-				</configuration>
-			</plugin>
 			
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
