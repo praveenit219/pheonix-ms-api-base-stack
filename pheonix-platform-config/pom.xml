@@ -70,7 +70,7 @@
 
 			<plugin>
 				<groupId>com.spotify</groupId>
-				<artifactId>dockerfile-maven-plugin</artifactId>
+				<artifactId>docker-maven-plugin</artifactId>
 				<version>${dockerfile-maven-version}</version>
 				<executions>
 					<execution>
@@ -82,7 +82,7 @@
 				</executions>
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<dockerDirectory>${project.basedir}\src\main\docker</dockerDirectory>
 					<imageTags>
 						<imageTag>${project.version}</imageTag>
 						<imageTag>latest</imageTag>
