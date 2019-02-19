@@ -1,4 +1,7 @@
-FROM openjdk:8-jre
+#FROM openjdk:8-jre
+FROM openjdk:8-jre-alpine
+RUN apk add --no-cache bash
+
 VOLUME /tmp
 VOLUME /tmp
 ADD pheonix-platform-config.jar app.jar
