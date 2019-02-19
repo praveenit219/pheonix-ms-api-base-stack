@@ -4,7 +4,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.pheonix</groupId>
-	<version>1.0</version>
+	<version>${version.number}</version>
 	<artifactId>pheonix-platform-config</artifactId>
 	<name>pheonix platform configuration project</name>
 	<description>pheonix application configuration management library source</description>
@@ -23,6 +23,7 @@
 		<start-class>com.pheonix.platform.configuration.PlatformConfigurationApplication</start-class>
 		<dockerfile-maven-version>1.4.10</dockerfile-maven-version>
 		<docker.image.prefix>pheonix</docker.image.prefix>
+		<version.number>${git.commit.time}.${git.commit.id.abbrev}</version.number>
 	</properties>
 
 	<dependencyManagement>
@@ -53,7 +54,32 @@
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
+
+
 		<plugins>
+
+			<plugin>
+				<groupId>pl.project13.maven</groupId>
+				<artifactId>git-commit-id-plugin</artifactId>
+				<version>2.2.6</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>revision</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<dateFormat>yyyyMMdd-HHmmss</dateFormat><!-- human-readable part of 
+						the version id -->
+					<dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
+					<generateGitPropertiesFile>false</generateGitPropertiesFile><!-- somehow 
+						necessary. otherwise the variables are not available in the pom -->
+				</configuration>
+			</plugin>
+
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -65,8 +91,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			
-			
 
 			<plugin>
 				<groupId>com.spotify</groupId>
@@ -82,7 +106,7 @@
 				</executions>
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<dockerDirectory>${project.basedir}\src\main\docker</dockerDirectory>
+					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
 					<imageTags>
 						<imageTag>${project.version}</imageTag>
 						<imageTag>latest</imageTag>
