@@ -7,8 +7,3 @@
                                                                                         
 	Version: ${pheonix.platform.config.version}
 	
-
- 
- 
- 
- 

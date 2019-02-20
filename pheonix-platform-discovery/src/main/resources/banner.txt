@@ -7,6 +7,3 @@
                                                                                                              
   Version: ${pheonix.platform.discovery.version}
   
-  
-
-
