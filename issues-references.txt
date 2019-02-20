@@ -22,6 +22,27 @@ work around ->
 
 	and run the mvn install for spotify docker
 	
-	
+
+com.spotify maven plugin
+========================
+
+the artifactid you use for the image or repository should be all case sensitive (small) if we use caps we will get build image issue
+this is observed after even setting the bat file. refer above.
+
+[ERROR] Failed to execute goal com.spotify:docker-maven-plugin:1.2.0:build (default) on project pheonix-platform-securityGateway: Exception caught: java.util.concurrent.ExecutionException: com.spotify.docker.client.shaded.javax.ws.rs.ProcessingException: com.spotify.docker.client.shaded.org.apache.http.client.ClientProtocolException: Cannot retry request with a non-repeatable request entity: Connection reset by peer: socket write error -> [Help 1]
+
 docker issues with maven for  credentials :
 ===========================================
+
+
+Turbine Streams on browser :
+=====================================
+http://localhost:8989/turbine.stream?cluster=PheonixPlatform
+
+hystrix dashboard:
+====================
+http://localhost:8989/hystrix
+http://localhost:8989/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8989%2Fturbine.stream%3Fcluster%3DPheonixPlatform&title=Pheonix%20Platform
+
+
+

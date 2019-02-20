@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: pheonix-platform-securitygateway
+
+pheonix:
+  platform:
+    securitygateway:
+      version: @project.version@

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: pheonix-platform-hystrix-dashboard
+
+turbine:
+  aggregator:
+    clusterConfig: PheonixPlatform
+  appConfig: pheonix-platform-securitygateway
+  clusterNameExpression: new String("default")
+
+pheonix:
+  platform:
+    hystrix:
+      version: @project.version@
