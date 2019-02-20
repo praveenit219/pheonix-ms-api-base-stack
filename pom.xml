@@ -13,6 +13,7 @@
 		<module>pheonix-platform-discovery</module>
 		<module>pheonix-platform-securitygateway</module>
 		<module>pheonix-platform-hystrix-dashboard</module>
+		
   </modules>
     
     

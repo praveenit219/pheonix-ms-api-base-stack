@@ -45,4 +45,14 @@ http://localhost:8989/hystrix
 http://localhost:8989/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8989%2Fturbine.stream%3Fcluster%3DPheonixPlatform&title=Pheonix%20Platform
 
 
+sleuth service properties at client side:
+========================================
+spring.sleuth.sampler.percentage=1.0
+spring.sleuth.web.skipPattern=(^cleanup.*|.+favicon.*)
 
+enable eureka based zipkin server details.
+
+zipkin-server
+=================
+run a standalone web server way 
+or docker based one. for now entered to gitignore
