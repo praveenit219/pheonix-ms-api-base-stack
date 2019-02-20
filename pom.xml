@@ -11,6 +11,7 @@
 		<module>pheonix-platform-common</module>
 		<module>pheonix-platform-config</module>
 		<module>pheonix-platform-discovery</module>
+		<module>pheonix-platform-securityGateway</module>
   </modules>
     
     

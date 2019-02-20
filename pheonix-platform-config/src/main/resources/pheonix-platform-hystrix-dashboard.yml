@@ -15,12 +15,12 @@ eureka:
   instance:
     preferIpAddress: true
     metadataMap:
-      cluster: AbixenPlatform
+      cluster: PheonixPlatform
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${abixen.services.eureka.uri}:8761/eureka/
+      defaultZone: http://${pheonix.services.eureka.uri}:8761/eureka/
 
 
 ---
@@ -33,7 +33,7 @@ eureka:
   instance:
     hostname: localhost
     metadataMap:
-      cluster: AbixenPlatform
+      cluster: PheonixPlatform
   client:
     registerWithEureka: true
     fetchRegistry: true
